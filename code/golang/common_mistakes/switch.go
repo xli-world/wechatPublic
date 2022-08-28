@@ -25,4 +25,9 @@ func main() {
 	p, err := "new variable", errors.New("new error") // 未声明新变量err，而是将errors.New("new error")赋值给了之前的err变量
 	fmt.Println(err)                                  // new error
 	_ = p
+	switch i := err.(type) {
+	case error:
+		fmt.Println(i)
+		return
+	}
 }

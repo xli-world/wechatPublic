@@ -11,4 +11,6 @@ func main() {
 	fmt.Println(1/z == math.Inf(1))    // true
 	fmt.Println(z/z == math.NaN())     // false
 	fmt.Println(math.IsNaN(z / z))     // true
+	var m int64
+	fmt.Println(m, -m, 1/m, -1/m, m/m) // 0 -0 +Inf -Inf NaN
 }
